@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <title>Document</title>
+    <style>
+
+        /*.cards img:hover{
+            opacity: 1;
+        }*/
+
+
+        /*.cards:hover a{
+            opacity: 1;
+            top: 0;
+            z-index: 500;
+        }
+
+        .cards a span{
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            opacity: 0;
+        }
+
+        .cards:hover a span{
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(50%);
+            opacity: 1;
+        }*/
+
+        /*.cards a{
+            display: block;
+            position: absolute;
+            top: -100%;
+            opacity: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            color: inherit;
+        }
+        */
+    </style>
+</head>
+<body>
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.js"></script>
+
+    <h1 class="title">Slider 3D Con Puro</h1>
+    <div class="content">
+        <div class="container__slider">
+            <div class="container">
+                <input type="radio" name="slider" id="item-1" checked onclick="myFunction()">
+                <input type="radio" name="slider" id="item-2" onclick="mySecFunction()">
+                <input type="radio" name="slider" id="item-3" onclick="myThiFunction()">
+
+                <div class="cards">
+                    <label class="card" for="item-1" id="selector-1">
+                        <img src="images/img1.jpg">
+                        <a href="https://www.facebook.com/"><span class="fab fa-facebook"></span></a>
+                    </label>
+                    <label class="card" for="item-2" id="selector-2">
+                        <img src="images/img2.jpg">
+                        <a href="https://www.instagram.com/"><span class="fab fa-instagram"></span></a>
+                    </label>
+                    <label class="card" for="item-3" id="selector-3">
+                        <img src="images/img3.jpg">
+                        <a href="https://www.youtube.com/"><span class="fab fa-youtube"></span></a>
+                    </label>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <a href="https://www.google.com"><p id="textfir" style="display:block">COMPANY 1</p></a>
+    </div>
+
+
+
+    <script>
+        function myFunction() {
+            // Get the checkbox
+            var radio = document.getElementById("item-1");
+            // Get the output text
+            var text = document.getElementById("textfir");
+
+            // If the checkbox is checked, display the output text
+            if (radio.checked == true){
+                document.querySelector("#textfir").innerHTML = "COMPANY 1-1";
+                $("#textfir").html("<a href='https://www.google.com'> HTML </a>");
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        function mySecFunction() {
+            // Get the checkbox
+            var radio = document.getElementById("item-2");
+            // Get the output text
+            var text = document.getElementById("textfir");
+
+            // If the checkbox is checked, display the output text
+            if (radio.checked == true){
+                document.querySelector("#textfir").innerHTML = "COMPANY 1-2";
+                $("#textfir").html("<a href='https://www.twitter.com'> HTML </a>");
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        function myThiFunction() {
+            // Get the checkbox
+            var radio = document.getElementById("item-3");
+            // Get the output text
+            var text = document.getElementById("textfir");
+
+            // If the checkbox is checked, display the output text
+            if (radio.checked == true){
+                document.querySelector("#textfir").innerHTML = "COMPANY 1-3";
+                $("#textfir").html("<a href='https://www.facebook.com'> HTML </a>");
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
